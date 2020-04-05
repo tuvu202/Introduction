@@ -1,0 +1,4 @@
+src/registerServiceWorker.js
+src/serviceWorker/
+sw.js
+umaWorker.js
