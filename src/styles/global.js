@@ -1,4 +1,5 @@
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import { SwiperStyle } from './swiper';
 
 const background = {
   primary: '#037fff',
@@ -10,24 +11,12 @@ const typo = {
   secondary: '#f2f2f2',
 }
 
-const gradient = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-`;
-
 const Theme = styled.div`
   position: relative;
   min-height: 100vh;
   z-index: 1;
-  @media only screen and (max-width: 1599px) and (min-width: 1200px) {
-    padding-left: 260px;
+  @media only screen and (max-width: 1899px) and (min-width: 1200px) {
+    padding-left: 300px;
   }
 `;
 
@@ -38,9 +27,6 @@ const ContentWrapper = styled.div`
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  background: linear-gradient(-45deg, #FBFDFF, #F9FDFE, #D4DAD8, #F9FAEF);
-	background-size: 400% 400%;
-	animation: ${gradient} 10s ease infinite;
 `;
 
 const GlobalStyles = createGlobalStyle`
@@ -63,6 +49,8 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     background: ${typo.primary};
   }
+
+  ${SwiperStyle}
 `;
 
 export { background, typo, Theme, GlobalStyles, ContentWrapper }
